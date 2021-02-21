@@ -1,3 +1,5 @@
+import com.sun.deploy.util.StringUtils;
+
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.util.Arrays;
@@ -14,7 +16,7 @@ public class SortingText {
             String textFromFileLowChars = textFromFile.toLowerCase();
 
 
-            String[] word = textFromFileLowChars.split("\\s+");
+            char[] word = textFromFileLowChars.toCharArray();
             Arrays.sort(word);
 
             int count = 0;
@@ -22,12 +24,12 @@ public class SortingText {
             for(int i = 0; i< word.length; i++){
                 count = 1;
                 for(int j=i+1;j< word.length;j++){
-                    if(word[i].equals(word[j])){
+                    if(word[i] == (word[j])){
                         count = count + 1;
-                        word[j]="0";
+                        word[j]='0';
                     }
                 }
-                if(word[i]!="0"){
+                if(word[i]!='0'){
                     System.out.println(word[i]+"' repeated "+count+ " time(s)");
                 }
             }
