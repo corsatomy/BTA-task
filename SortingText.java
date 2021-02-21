@@ -9,7 +9,7 @@ public class SortingText {
 
         public static void main(String[] args) throws FileNotFoundException {
 
-            File file = new File("C:\\Users\\Asus\\Documents\\HeadJava\\src\\main\\java\\RandomText.txt");
+            File file = new File("RandomText.txt");
             Scanner scan = new Scanner(file);
 
             String textFromFile = scan.nextLine();
