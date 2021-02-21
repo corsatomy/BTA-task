@@ -16,21 +16,21 @@ public class SortingText {
             String textFromFileLowChars = textFromFile.toLowerCase();
 
 
-            char[] word = textFromFileLowChars.toCharArray();
-            Arrays.sort(word);
+            char[] characters = textFromFileLowChars.toCharArray();
+            Arrays.sort(characters);
 
             int count = 0;
 
-            for(int i = 0; i< word.length; i++){
+            for(int i = 0; i< characters.length; i++){
                 count = 1;
-                for(int j=i+1;j< word.length;j++){
-                    if(word[i] == (word[j])){
+                for(int j=i+1;j< characters.length;j++){
+                    if(characters[i] == (characters[j])){
                         count = count + 1;
-                        word[j]='0';
+                        characters[j]='0';
                     }
                 }
-                if(word[i]!='0'){
-                    System.out.println(word[i]+"' repeated "+count+ " time(s)");
+                if(characters[i]!='0'){
+                    System.out.println(characters[i]+"' repeated "+count+ " time(s)");
                 }
             }
 
